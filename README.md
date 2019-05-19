@@ -23,50 +23,50 @@ Things you may want to cover:
 
 * ...
 
-#Name peep
+# Name Peep
 
-##UserTable
+## UserTable
 |column|type|option|
-----|----|----
+|:---|:---|:---|
 |nickname|string|null:false,unique|
 |password|string|null:false|
 |email|string|null:false,unique|
 |last-name-kanji|string|null:false|
 |first-name-kanji|string|null:fals|
 
-###Association
+### Association
 -has_many:tweets
 dependent::destroy -has_one:address
 
 
-##AddressTable
+## AddressTable
 |column|type|option|
-----|----|----
+|:---|:---|:---|
 |zip-code|integer|null:false|
 |prefecture|string|null:false|
 |city|text|null:false|
 |block-number|string|null:false|
-|building-name|text|
+|building-name|text||
 |user_id|integer|foreign_key:true|
 
-###Association
+### Association
 -has_one:user
 
 
-##TweetTable
+## TweetTable
 |column|type|option|
-----|----|----
-|coment|text|
+|:---|:---|:---|
+|coment|text||
 
-###Association
+### Association
 -belongs_to:user
 -has_many:images
 
 
-##ImageTable
+## ImageTable
 |column|type|option|
-----|----|----
+|:---|:---|:---|
 |image|text|foreign_key:true|
 
-###Association
+### Association
 -belogs_to:tweet
