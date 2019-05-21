@@ -17,3 +17,37 @@
           %li.right-nav__peep__btn
             = link_to 'peep', '#', class: :'right-nav__peep__btn__icon'
 
+.page-outer.clearfix
+  .page-container.clearfix
+    .dashboard-left
+      .dashboard-left__profile
+        .dashboard-left__profile__top
+        .dashboard-left__profile__bottom SUKE@駆け出し
+        %ul.bottom
+          %li.bottom__content 
+            %span.bottom__content__stats Peep
+            %span.bottom__content__stats__number 49
+          %li.bottom__content 
+            %span.bottom__content__stats Followers
+            %span.bottom__content__stats__number 49
+          %li.bottom__content 
+            %span.bottom__content__stats Following
+            %span.bottom__content__stats__number 49
+
+      .main
+        .main__contents
+          .main__contents__container
+            .peeps
+              %ol.peeps__items
+                %li.peeps__items__main
+                  .peeps__items__main__contents
+                    .contents
+                      .contents__name Yusuke
+                      .contents__text
+                        %p こんにちはーーー
+                      .contents__footer
+                        .contents__footer__items
+                          %span.contents__footer__items__icon
+                            %i.far.fa-comment
+                          %span.contents__footer__items__icon
+                            %i.far.fa-heart 1
