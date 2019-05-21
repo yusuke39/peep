@@ -5,10 +5,14 @@
 
       %div.left-nav
         %ul.left-nav__inner
-          %li.left-nav__inner__home
+          %li.left-nav__inner__items
             = link_to 'HOME', '#', class: :'fas fa-home left-nav__home'
-          %li.left-nav__inner__mypage
+          %li.left-nav__inner__items
             = link_to 'MY PAGE', '#', class: :'fas fa-user-cog left-nav__mypage'
+          %li.left-nav__inner__items
+            = link_to '新規完飲登録', '#', class: :'user-sign-up'
+          %li.left-nav__inner__items
+            = link_to 'ログイン', '#', class: :'user-login'
 
       %div.right-nav
         = form_with url: '', method: :get, local: :true do |f|
