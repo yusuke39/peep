@@ -1,0 +1,24 @@
+.global-nav
+  .global-nav__inner
+    .gloval-nav__inner__container
+      = link_to '', '#', class: :'fas fa-burn icon__main'
+
+      %div.left-nav
+        %ul.left-nav__inner
+          %li.left-nav__inner__items
+            = link_to 'HOME', root_path, class: :'fas fa-home left-nav__home'
+          %li.left-nav__inner__items
+            = link_to 'MY PAGE', '#', class: :'fas fa-user-cog left-nav__mypage'
+          %li.left-nav__inner__items
+            = link_to '新規会員登録', new_user_registration_path, class: :'user-sign-up'
+          %li.left-nav__inner__items
+            = link_to 'ログイン', '#', class: :'user-login'
+          %li.left-nav__inner__items
+            = link_to 'ログアウト',  users_destroy_path, class: :'user-logout'
+
+      %div.right-nav
+        = form_with url: '', method: :get, local: :true do |f|
+          = f.text_field :submit, placeholder: 'search peep',class: :'search-form fas fa-search'
+        %ul.right-nav__peep
+          %li.right-nav__peep__btn
+            = link_to 'peep', '#', class: :'right-nav__peep__btn__icon'
