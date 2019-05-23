@@ -16,6 +16,14 @@
   width: 300px;
 }
 
+.label_sub{
+  background-color: orangered;
+  border-radius: 30px;
+  color: #fff;
+  border: 7px solid orangered;
+  font-size: 10px;
+}
+
 .signup-btn{
   border: 1px solid;
   height: 50px;
@@ -26,4 +34,16 @@
 
 .label{
   font-size: 15px;
+}
+
+#prefecture{
+  border: 0;
+  padding: 10px;
+  font-size: 1.3em;
+  border: solid 10px orangered;
+  margin: 0 0 20px;
+  width: 325px;
+  background-color: orangered;
+  color: #fff;
+  font-size: 20px;
 }
