@@ -1,0 +1,29 @@
+= render 'peep/header'
+
+.register-wrapper
+  %h2.new-register 住所登録
+  = form_with(url: '/users', method: 'post') do |f|
+
+    .field
+      -# = f.label '必須', class: :'label_sub'
+      = f.label '郵便番号', class: :'label'
+      %br/
+      = f.text_field :zip_code, autofocus: true, class: :'text-field'
+    .field
+      = f.label '都道府県', class: :'label'
+      %br/
+      = f.collection_select :prefecture, Prefecture.all, :id, :name
+    .field
+      = f.label '市区町村', class: :'label'
+      %br/
+      = f.text_field :city, autofocus: true, class: :'text-field'
+    .field
+      = f.label '番地', class: :'label'
+      %br/
+      = f.text_field :block_number, autofocus: true, class: :'text-field'
+    .field
+      = f.label '建物名', class: :'label'
+      %br/
+      = f.text_field :building_name, autofocus: true, class: :'text-field'
+    .actions
+      = f.submit "登録する", class: :'signup-btn'
