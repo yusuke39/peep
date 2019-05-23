@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: peep_production
-  username: peep
-  password: <%= ENV['PEEP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
