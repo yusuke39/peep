@@ -1,6 +1,8 @@
 *{
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 .clearfix::after{
@@ -9,19 +11,10 @@
   clear: both;
 }
 
-li{
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
-}
-
 
 .global-nav{
   border-bottom: 1px solid rgba(0,0,0,0.25);
   height: 46px;
-  position: relative;
   width: 100%;
 
     &__inner{
@@ -49,6 +42,7 @@ a{
   display: flex;
   text-align: left;
   margin-left: 30px;
+  color: gray;
 
   &__items{
     margin-top: 12px;
@@ -120,6 +114,7 @@ a{
 
 .dashboard-left{
   display: flex;
+  margin-top: 30px;
 
   &__profile{
     border: 1px solid #e6ecf0;

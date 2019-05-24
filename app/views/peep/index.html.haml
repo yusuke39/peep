@@ -6,7 +6,11 @@
       .dashboard-left__profile
         .dashboard-left__profile__top
           %i.fa.fa-user-circle.fa-4x.profile-main-icon
-        .dashboard-left__profile__bottom SUKE@駆け出し
+        .dashboard-left__profile__bottom 
+          - if user_signed_in?
+            = current_user.nickname
+          - else
+            = '未ログイン'
         %ul.bottom
           %li.bottom__content 
             %span.bottom__content__stats Peep
