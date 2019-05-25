@@ -1,0 +1,53 @@
+.mypage{
+  display: flex;
+}
+
+.mypage-wrpper{
+  height: 100%;
+}
+
+.mypage-left{
+  height: 300px;
+  width: 140px;
+  border: solid 1px orange;
+  background-color: orangered;
+  color: #fff;
+
+  &__contain{
+    padding: 20px;
+
+    &__list{
+
+      &__all{
+
+        &__menu{
+          
+          a{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mypage-main{
+  margin: 20px 520px;
+
+  &__contain{
+
+    &__logo{
+      font-size: 30px;
+      font-weight: bold;
+
+      &__icon{
+        padding: 10px 30px;
+
+        &__user{
+          font-size: 35px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+= render 'peep/header'
+
+.mypage
+  .mypage-left
+    .mypage-left__contain
+      %ul.mypage-left__contain__list
+        %li.mypage-left__contain__list__all
+          = link_to '住所登録',  new_address_path, class: :'.mypage-left__contain__list__all__menu'
+        %li.mypage-left__contain__list__all
+          = link_to 'ログアウト',  users_index_path, class: :'.mypage-left__contain__list__all__menu'
+        %li.mypage-left__contain__list__all
+          = link_to 'MyPage編集',  new_address_path, class: :'.mypage-left__contain__list__all__menu'
+
+  .mypage-main
+    .mypage-main__contain
+      .mypage-main__contain__logo My Page
+      %i.fa.fa-user-circle.fa-4x.mypage-main__contain__logo__icon
+        %p.mypage-main__contain__logo__icon__user 
+          = current_user.nickname
