@@ -7,6 +7,7 @@ class AddressController < ApplicationController
   def create
     @address = Address.new(address_params)
     if @address.save
+      flash[:notice] = '住所を登録しました！'
       redirect_to controller: 'peep', action: 'index'
     else
       render :new
