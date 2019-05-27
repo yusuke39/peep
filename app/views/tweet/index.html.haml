@@ -1,0 +1,11 @@
+= render 'peep/header'
+
+.tweets-main
+  .tweets-main__contain
+    .tweets-main__contain__logo PEEP
+    %i.fa.fa-user-circle.fa-4x.tweets-main__contain__logo__icon
+      %p.tweets-main__contain__logo__icon__user 
+        = current_user.nickname
+    = form_with(url: '/tweet', method: :post, lcoal: true) do |f|
+      = f.text_area  :comment, size: '70x5', placeholder: '何がありましたか?', class: :'tweets-field'
+      = f.submit :submit , class: :'tweets-field__btn'

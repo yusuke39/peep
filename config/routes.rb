@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   root 'peep#index'
   resources :address, only: [:index, :new, :create]
   resources :mypage, only:[:index, :destroy, :edit]
+  resources :tweet
 end
