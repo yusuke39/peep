@@ -25,20 +25,11 @@
             %span.bottom__content__stats Following
             %span.bottom__content__stats__number 49
 
-      .main
-        .main__contents
-          .main__contents__container
-            .peeps
-              %ol.peeps__items
-                %li.peeps__items__main
-                  .peeps__items__main__contents
-                    .contents
-                      .contents__name Yusuke
-                      .contents__text
-                        %p こんにちはーーー
-                      .contents__footer
-                        .contents__footer__items
-                          %span.contents__footer__items__icon
-                            %i.far.fa-comment
-                          %span.contents__footer__items__icon
-                            %i.far.fa-heart 1
+    %ul.peeps__items
+      - @tweets.each do |tweet|
+        %li.contents
+          = tweet.user.nickname
+          .contents__text
+            = tweet.comment
+          %i.far.fa-comment
+          %i.far.fa-heart 1
