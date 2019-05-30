@@ -30,7 +30,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def destroy
     super
       redirect_to controller: 'peep', action: 'index'
-    end
   end
 
   # GET /resource/cancel
