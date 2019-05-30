@@ -15,19 +15,15 @@
 
   &__contain{
     padding: 20px;
+  }
+}
 
-    &__list{
-
-      &__all{
-
-        &__menu{
-          
-          a{
-            color: white;
-          }
-        }
-      }
-    }
+.mypage-left__contain__list__all__menu{
+  display: block;
+  margin-top: 20px;
+  
+  a{
+    color: #fff;
   }
 }
 

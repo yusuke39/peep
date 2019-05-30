@@ -7,9 +7,9 @@
         %ul.left-nav__inner
           - if user_signed_in?
             %li.left-nav__inner__items
-              = link_to 'HOME', root_path, class: :'fas fa-home left-nav__home'
+              = link_to 'HOME', root_path, class: :'fas fa-home left-nav__after__login'
             %li.left-nav__inner__items
-              = link_to 'MY PAGE', mypage_index_path, class: :'fas fa-user-cog left-nav__mypage'
+              = link_to 'MY PAGE', mypage_index_path, class: :'fas fa-user-cog left-nav__after__login'
           - else
             %li.left-nav__inner__items
               = link_to '新規会員登録', new_user_registration_path, class: :'user-sign-up'

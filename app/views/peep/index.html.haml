@@ -25,12 +25,5 @@
             %span.bottom__content__stats Following
             %span.bottom__content__stats__number 49
 
-    %ul.peeps__items
-      - if @tweets.present?
-        - @tweets.each do |tweet|
-          %li.contents
-            = tweet.user.nickname
-            .contents__text
-              = tweet.comment
-            %i.far.fa-comment
-            %i.far.fa-heart 1
+    = render 'peep/tweet'
+

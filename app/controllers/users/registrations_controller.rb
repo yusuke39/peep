@@ -29,7 +29,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # DELETE /resource
   def destroy
     super
-    redirect_to controller: 'peep', action: 'index'
+      redirect_to controller: 'peep', action: 'index'
+    end
   end
 
   # GET /resource/cancel
