@@ -12,6 +12,8 @@
 }
 
 
+//ヘッダー部分
+
 .global-nav{
   border-bottom: 1px solid rgba(0,0,0,0.25);
   height: 46px;
@@ -45,14 +47,38 @@
   color: gray;
 
   &__items{
-    margin-top: 12px;
-    margin-left: 10px;
-    margin-right: 20px;
-
-    a{
-      color: gray;
-    }
+    margin: 12px 20px 0px 50px;
   }
+}
+
+.user-sign-up{
+  background-color: #59b9c6;
+  border-radius: 30px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.user-login{
+  background-color: orangered;
+  border-radius: 30px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.left-nav__after__login{
+  color: gray;
+}
+
+.left-nav__after__login:hover{
+  color: orangered;
 }
 
 
@@ -80,6 +106,7 @@
     width: 100px;
     height: 30px;
     text-align: center;
+    color: #fff;
 
     a{
       color: #fff;
@@ -100,8 +127,11 @@
   width: 120%;
 }
 
+
+//メインコンテンツ部分
+
 .page-outer{
-  height: 100vh;
+  min-height: 100vh;
   background-color: #e6ecf0;
 }
 
@@ -150,25 +180,17 @@
   }
 }
 
-
-// .peeps{
-//   position: relative;
-//   top: -1px;
-//   background-color: #fff;
-//   border-left: 1px solid #e6ecf0;
-//   border-right: 1px solid #e6ecf0;
-//   background-clip: padding-box;
-//   width: 500px;
-//   height: 150px;
-
 .peeps{
   display: flex;
   flex-direction: column;
 
   &__items{
     margin-left: 50px;
+    margin-top: 30px;
   }
 }
+
+//ツイート部分
 
 .contents{
   padding: 20px 40px 10px;
@@ -179,6 +201,7 @@
   background-clip: padding-box;
   margin-bottom: 3px;
   min-width: 300px;
+  min-height: 50px;
 
 }
 
@@ -202,3 +225,11 @@
   -webkit-animation: fadeout 1s linear 3s 1;
 }
 
+.contents__icon{
+  margin-left: 10px;
+  color: gray;
+}
+
+.edit-confirm{
+  margin-left: 300px;
+}
