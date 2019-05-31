@@ -9,6 +9,4 @@
         %i.far.fa-heart.contents__icon 1
         - if user_signed_in? && current_user.id == tweet.user_id
           = link_to '', "/tweet/#{tweet.id}", method: :delete, class: :'far fa-trash-alt deletebtn contents__icon '
-          %i.far.fa-edit.editbtn.contents__icon
-            .edit-confirm
-          -# = link_to '', "/tweet/#{tweet.id}", method: :patch, class: :'far fa-edit editbtn contents__icon '
+          = link_to '', "/tweet/#{tweet.id}/edit", metod: :get, class: :'far fa-edit editbtn contents__icon'
