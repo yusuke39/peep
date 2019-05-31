@@ -31,5 +31,16 @@
     font-size: 20px;
     color: white;
     border-radius: 30px;
+
+    &__cancel{
+      background-color: orangered;
+      width: 130px;
+      height: 50px;
+      font-size: 20px;
+      color: white;
+      border-radius: 30px;
+      border: solid 13px orangered;
+      margin-left: 30px;
+    }
   }
 }

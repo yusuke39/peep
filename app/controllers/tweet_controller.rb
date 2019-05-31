@@ -15,10 +15,22 @@ class TweetController < ApplicationController
     end
   end
 
-  def destroy
-    Tweet.new
+  def edit
     @tweet = Tweet.find(params[:id])
-    @tweet.destroy
+  end
+
+  def update
+    tweet = Tweet.find(params[:id])
+    if tweet.user_id == current_user.id
+      tweet.update(tweet_params)
+      flash[:notice] = '編集完了！！'
+      redirect_to root_path
+    end
+  end
+
+  def destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy
     redirect_to root_path
   end
 
