@@ -5,6 +5,9 @@
         = tweet.user.nickname
         .contents__text
           = simple_format(tweet.comment)
+        - if tweet.images.attached?
+          - tweet.images.each do |image|
+            = image_tag image.variant(resize: "150x150")
         %i.far.fa-comment.contents__icon 
         %i.far.fa-heart.contents__icon 1
         - if user_signed_in? && current_user.id == tweet.user_id
