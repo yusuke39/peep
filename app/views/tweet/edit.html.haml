@@ -8,5 +8,8 @@
         = current_user.nickname
   = form_with(model: @tweet, url: "/tweet/#{@tweet.id}", method: :patch, lcoal: true) do |f|
     = f.text_area  :comment, size: '70x5', class: :'tweets-field'
+    = f.file_field :images, multiple: true, class: :'image_field'
+    %br/
+    %br/
     = f.submit :submit , class: :'tweets-field__btn'
     = link_to 'キャンセル', root_path, class: :'tweets-field__btn__cancel'
