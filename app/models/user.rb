@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :tweets, dependent: :destroy
   has_one :address
   has_one :prefecture
+  # has_one_attachd :avatar
 end
