@@ -1,3 +1,3 @@
-$(function(){
-  setTimeout($('.flash').fadeOut('slow'), 30000);
-})
+// $(function(){
+//   setTimeout($('.flash').fadeOut('slow'), 30000);
+// })

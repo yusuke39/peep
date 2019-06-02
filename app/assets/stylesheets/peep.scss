@@ -18,6 +18,8 @@
   border-bottom: 1px solid rgba(0,0,0,0.25);
   height: 46px;
   width: 100%;
+  position: fixed;
+  z-index: 1;
 
     &__inner{
       background-color: #fff;
@@ -133,6 +135,7 @@
 .page-outer{
   min-height: 100vh;
   background-color: #e6ecf0;
+  padding-top: 46px;
 }
 
 .page-container{
@@ -160,11 +163,29 @@
 }
 
 .profile-main-icon{
-  height: 200px;
-  width: 200px;
   position: relative;
-  top: 50%;
-  left: 45%;
+  top: 50px;
+  left: 160px;
+}
+
+.profile-image{
+  position:relative;
+  top: 30px;
+  left: 150px;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    height:100%;
+    width: 100%;
+    border-radius: 50%;
+  }
 }
 
 .dashboard-left__profile__bottom{
@@ -232,4 +253,22 @@
 
 .edit-confirm{
   margin-left: 300px;
+}
+
+#scroll_to_top {
+  cursor: pointer;
+  position: fixed;
+  right: 200px;
+  bottom: 100px;
+  background-color: orangered;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.scroll_to_top__btn{
+  position: fixed;
+  right: 240px;
+  bottom: 135px;
+  cursor: pointer;
 }

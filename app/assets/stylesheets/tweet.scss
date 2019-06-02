@@ -1,5 +1,8 @@
 .tweets-main{
   margin: 20px 520px;
+  margin-top: 0;
+  padding-top: 100px;
+
 
   &__contain{
 
@@ -43,4 +46,53 @@
       margin-left: 30px;
     }
   }
+}
+
+#file{
+  display: none;
+}
+
+
+//画像投稿
+
+#img_field {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px 8px;
+  border: solid 1px #EDBC6C;
+  color: #666;
+  position: relative;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 440px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
+
+
+.file-upload{
+  font-size: 40px;
+  color: #aaa;
+  position: relative;
+  top: 30px;
+  left: 180px;
+}
+
+#img_field:hover {
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+}
+
+#img_field:hover i {
+  transition: 0.3s ease-out;
+  display: block;
+  color: #fff
 }

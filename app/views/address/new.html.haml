@@ -1,8 +1,6 @@
-= render 'peep/header'
-
 .register-wrapper
   %h2.new-register 住所登録
-  = form_with model: @address, url: '/address',method: :post, local: true do |f|
+  = form_with model: @address, url: '/address',method: :post, class: :'address_register',local: true do |f|
 
     .field
       -# = f.label '必須', class: :'label_sub'
