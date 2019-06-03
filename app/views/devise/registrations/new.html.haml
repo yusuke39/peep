@@ -31,5 +31,17 @@
       = f.label '名（漢字）', class: :'label'
       %br/
       = f.text_field :first_name_kanji, autofocus: true, class: :'text-field'
+    .field
+      = f.label 'プロフィール画像', class: :'label'
+      %br/
+      = f.file_field :avatar, class: :'image_field', id: :'file'
+      #img_field.user_image{:onclick => "$('#file').click()"}
+        - if @user.image.present?
+          = image_tag(@user.image)
+        -else
+          %i.fas.fa-image.file-upload
+      %br/
     .actions
       = f.submit "次へ進む", class: :'signup-btn'
+      %br/
+      %br/

@@ -1,11 +1,15 @@
-= render 'peep/header'
-
-.page-outer.clearfix
+#scroll_to_top
+%p.far.fa-hand-point-up.fa-5x.scroll_to_top__btn
+.page-outer.infinite_scroll.clearfix
   .page-container.clearfix
     .dashboard-left
       .dashboard-left__profile
         .dashboard-left__profile__top
-          %i.fa.fa-user-circle.fa-4x.profile-main-icon
+          - if current_user && current_user.avatar.attached?
+            .profile-image
+              = image_tag current_user.avatar.variant(resize: "80x80"), class: :'profile-main-icon'
+          - else
+            %i.fa.fa-user-circle.fa-4x.profile-main-icon
         .dashboard-left__profile__bottom 
           - if user_signed_in?
             = current_user.nickname
@@ -23,4 +27,3 @@
             %span.bottom__content__stats__number 49
 
     = render 'peep/tweet'
-

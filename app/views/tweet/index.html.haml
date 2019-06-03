@@ -8,7 +8,12 @@
         = current_user.nickname
     = form_with(model: @tweet, url: '/tweet', lcoal: true) do |f|
       = f.text_area  :comment, size: '70x5', placeholder: '何がありましたか?', class: :'tweets-field'
-      = f.file_field :images, multiple: true, class: :'image_field'
+      = f.file_field :images, multiple: true, class: :'image_field', id: :'file'
+      #img_field{:onclick => "$('#file').click()"}
+        - if @tweet.images.present?
+          = image_tag(@tweet.images)
+        -else
+          %i.fas.fa-image.file-upload
       %br/
       %br/
       = f.submit :submit , class: :'tweets-field__btn'
