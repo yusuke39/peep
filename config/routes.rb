@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :address, only: [:index, :new, :create]
   resources :mypage, only:[:index, :destroy, :edit]
   resources :tweet
+  resources :like, only:[:index, :destroy]
+  post '/like/:id' => 'like#create', as: 'iine'
 end

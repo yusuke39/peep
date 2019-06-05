@@ -6,7 +6,7 @@
     %i.fa.fa-user-circle.fa-4x.tweets-main__contain__logo__icon
       %p.tweets-main__contain__logo__icon__user 
         = current_user.nickname
-    = form_with(model: @tweet, url: '/tweet', lcoal: true) do |f|
+    = form_with(model: @tweet, url: '/tweet', local: true) do |f|
       = f.text_area  :comment, size: '70x5', placeholder: '何がありましたか?', class: :'tweets-field'
       = f.file_field :images, multiple: true, class: :'image_field', id: :'file'
       #img_field{:onclick => "$('#file').click()"}
