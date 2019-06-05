@@ -7,9 +7,12 @@
           = simple_format(tweet.comment)
         - if tweet.images.attached?
           - tweet.images.each do |image|
-            = image_tag image.variant(resize: "150x150")
+            = image_tag image.variant(resize: "100x100")
         %i.far.fa-comment.contents__icon 
-        %i.far.fa-heart.contents__icon 1
+        - if current_user.likes.find_by(tweet_id: tweet.id)
+          = link_to '済み', "/like/#{tweet.id}", method: :delete, class: :'far fa-heart contents__icon', id: :'iine'
+        - else
+          = link_to '', "/like/#{tweet.id}",method: :post, class: :'far fa-heart contents__icon'
         - if user_signed_in? && current_user.id == tweet.user_id
-          = link_to '', "/tweet/#{tweet.id}", method: :delete, class: :'far fa-trash-alt deletebtn contents__icon '
+          = link_to '', "/tweet/#{tweet.id}", method: :delete, class: :'far fa-trash-alt deletebtn contents__icon'
           = link_to '', "/tweet/#{tweet.id}/edit", metod: :get, class: :'far fa-edit editbtn contents__icon'

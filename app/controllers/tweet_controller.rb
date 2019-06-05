@@ -1,5 +1,7 @@
 class TweetController < ApplicationController
 
+  before_action :authenticate_user! 
+
   def index
     @tweet = Tweet.new
     redirect_to new_user_session_path unless user_signed_in?
@@ -7,11 +9,12 @@ class TweetController < ApplicationController
 
   def create
     @tweet = Tweet.new(tweet_params)
+    @tweet.user_id == current_user.id
     if @tweet.save
-      flash[:notice] = 'つぶやきました！！'
-      redirect_to controller: 'peep', action: 'index'
-    else
-      render 'index'
+    flash[:notice] = 'つぶやきました！！'
+    redirect_to controller: :peep, action: :index
+    else 
+      render 'new'
     end
   end
 

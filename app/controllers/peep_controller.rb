@@ -2,7 +2,7 @@ class PeepController < ApplicationController
 
   def index
     @tweet = Tweet.new
-    @tweets = Tweet.all
+    @tweets = Tweet.order('id DESC')
   end
   
 end
