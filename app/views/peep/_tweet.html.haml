@@ -9,7 +9,7 @@
           - tweet.images.each do |image|
             = image_tag image.variant(resize: "100x100")
         %i.far.fa-comment.contents__icon 
-        - if current_user.likes.find_by(tweet_id: tweet.id)
+        - if user_signed_in? && current_user.likes.find_by(tweet_id: tweet.id) 
           = link_to '済み', "/like/#{tweet.id}", method: :delete, class: :'far fa-heart contents__icon', id: :'iine'
         - else
           = link_to '', "/like/#{tweet.id}",method: :post, class: :'far fa-heart contents__icon'
